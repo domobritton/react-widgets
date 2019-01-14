@@ -4,30 +4,25 @@ import { Toggle } from './Utilities';
 import Modal from './Modal';
 
 export default class Tabs extends Component {
+
+    modalItem = (on, toggle, select) => {
+        return (
+            <Modal on={on} toggle={toggle}>
+                <h1>{`HELLO MODAL ${select}`}</h1>
+            </Modal>   
+        )
+    }
+
   render() {
     return (
       <Wrapper>
         <Toggle>
             {({on, toggle, select}) => (
                 <Fragment>
-                    <Button onClick={toggle} value='one'>MODAL ONE</Button>
-                    {select === 'one' && 
-                    <Modal on={on} toggle={toggle}>
-                        <h1>HELLO MODAL ONE</h1>
-                    </Modal>}
-                
-                    <Button onClick={toggle} value='two'>MODAL TWO</Button>
-                    {select === 'two' &&
-                    <Modal on={on} toggle={toggle}>
-                        <h1>HELLO MODAL TWO</h1>
-                    </Modal>
-                    }
-                    <Button onClick={toggle} value='three'>MODAL THREE</Button>
-                    {select === 'three' &&
-                    <Modal on={on} toggle={toggle}>
-                        <h1>HELLO MODAL THREE</h1>
-                    </Modal>
-                    }
+                    <Button onClick={toggle} value='ONE'>MODAL ONE</Button>
+                    <Button onClick={toggle} value='TWO'>MODAL TWO</Button>
+                    <Button onClick={toggle} value='THREE'>MODAL THREE</Button>
+                    {this.modalItem(on, toggle, select)}
                 </Fragment>
             )}
         </Toggle>
