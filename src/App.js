@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Clock from './Clock';
+import Carousel from './Carousel';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <Carousel />
         <Clock />
       </div>
     );

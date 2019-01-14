@@ -7,7 +7,7 @@ export default class Clock extends Component {
         hours: 0,
         minutes: 0,
         seconds: 0,
-        military: true,
+        military: false,
     }
 
     componentDidMount() {
@@ -61,7 +61,7 @@ export default class Clock extends Component {
       const { military } = this.state;
 
       return (
-        <>
+        <Wrapper>
             <TimeWrapper>
                 {military ? this.clock() : this.twelveHourClock()}
             </TimeWrapper>
@@ -69,10 +69,16 @@ export default class Clock extends Component {
                 onClick={this.handleClick}>
                 {military ? `12 hour` : `24 hour`}
             </Button>
-        </>
+        </Wrapper>
       )
   }
 }
+
+const Wrapper = styled.div`
+    position: relative;
+    width: 100%;
+    height: 720px;
+`;
 
 const TimeWrapper = styled.div`
     display: flex;
@@ -82,7 +88,7 @@ const TimeWrapper = styled.div`
     background: #159957;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 90vh;
+    height: 720px;
 `;
 
 const Time = styled.div`
