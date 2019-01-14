@@ -41,9 +41,23 @@ const Wrapper = styled.div`
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    &:before {
+        content:"";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-image: url("https://transparenttextures.com/patterns/3px-tile.png");
+        z-index: 0;
+    }
 `;
 
 const Button = styled.button`
+    position: relative;
+    z-index: 0;
     margin: 30px;
     padding: 10px;
     background: #155799;

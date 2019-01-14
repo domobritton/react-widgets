@@ -54,7 +54,7 @@ autoCarousel = () => {
       const { auto } = this.state;
     return (
       <Wrapper>
-          {!auto && <Left onClick={this.increment}>LEFT</Left>}
+        {!auto && <Left onClick={this.increment}>LEFT</Left>}
         <Image src={this.state.images[this.state.number]} alt='image1'/>
         {!auto && <Right onClick={this.decrement}>RIGHT</Right>} 
         <Auto onClick={this.handleClick}>{auto ? `MANUAL` : `AUTO`}</Auto>
@@ -67,7 +67,6 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
     height: 100%:
-    max-height: 90vh;
 `;
 
 const Image = styled.img`
@@ -99,7 +98,7 @@ const Button = styled.button`
     }
 `;
 
-const Auto = styled.button `
+const Auto = styled.button`
     position: absolute;
     bottom: 50px;
     right: 40px;
