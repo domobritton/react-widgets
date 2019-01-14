@@ -4,6 +4,7 @@ import './App.css';
 
 import Clock from './Clock';
 import Carousel from './Carousel';
+import Tabs from './Tabs';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <Carousel />
         <Clock />
+        <Tabs />
       </div>
     );
   }

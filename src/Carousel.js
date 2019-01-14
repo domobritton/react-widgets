@@ -71,12 +71,12 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100vw;
-    max-height: 90vh;
+    height: 90vh;
 `;
 
 const Button = styled.button`
