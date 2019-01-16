@@ -5,7 +5,7 @@ import './App.css';
 import Clock from './Clock';
 import Carousel from './Carousel';
 import Tabs from './Tabs';
-import SearchBox from './SearchBox';
+import Search from './Search';
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
         <Carousel />
         <Clock />
         <Tabs />
-        <SearchBox />
+        <Search />
       </div>
     );
   }

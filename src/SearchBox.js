@@ -7,7 +7,12 @@ export default class SearchBox extends Component {
 
     static propTypes = {
         value: PropTypes.string,
-        placeholder: PropTypes.string 
+        placeholder: PropTypes.string,
+        data: PropTypes.array.isRequired
+    }
+
+    static defaultProps = {
+        data: []
     }
 
     state = {
@@ -32,12 +37,31 @@ export default class SearchBox extends Component {
         this.setState({ value: ''});
     }
 
+    dropdownNode = () => {
+        const { data } = this.props
+
+        return (
+            <div className=''>
+                <ul>
+                    {data.map(record => {
+                        return (
+                            <li
+                            key={record.key}>
+                            {record.value}
+                            </li>
+                        )
+                    })}
+                </ul>   
+            </div>
+        )
+    }
+
     inputNode = () => {
         const { placeholder } = this.props
         const { value } = this.state
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form>
                 <Input
                 type='text'
                 placeholder={placeholder}
@@ -52,6 +76,7 @@ export default class SearchBox extends Component {
       <SearchWrapper>
         <Image src={Image4} />
         {this.inputNode()}
+        {this.dropdownNode()}
       </SearchWrapper>
     );
   }
