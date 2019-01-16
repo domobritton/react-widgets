@@ -4,7 +4,7 @@ import { Portal } from './Utilities';
 
 export default class Modal extends Component {
     render() {
-       const { children, toggle, on} = this.props;
+       const { children, toggle, on } = this.props;
        return (
            <Portal>
                {on && 

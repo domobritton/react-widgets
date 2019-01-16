@@ -55,7 +55,7 @@ autoCarousel = () => {
     return (
       <Wrapper>
         {!auto && <Left onClick={this.increment}>LEFT</Left>}
-        <Image src={this.state.images[this.state.number]} alt='image1'/>
+        <Image src={this.state.images[this.state.number]} alt='image'/>
         {!auto && <Right onClick={this.decrement}>RIGHT</Right>} 
         <Auto onClick={this.handleClick}>{auto ? `MANUAL` : `AUTO`}</Auto>
       </Wrapper>
