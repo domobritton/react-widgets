@@ -76,6 +76,7 @@ const Image = styled.img`
     background-attachment: fixed;
     width: 100vw;
     height: 90vh;
+    opacity: 0.8;
 `;
 
 const Button = styled.button`

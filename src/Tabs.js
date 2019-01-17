@@ -53,6 +53,10 @@ const Wrapper = styled.div`
         background-image: url("https://transparenttextures.com/patterns/3px-tile.png");
         z-index: 0;
     }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 `;
 
 const Button = styled.button`

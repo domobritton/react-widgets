@@ -93,9 +93,18 @@ const TimeWrapper = styled.div`
 
 const Time = styled.div`
     font-size: 150px;
+    width: 100%;
     color: darkgray;
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: 900px) {
+        font-size: 100px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 60px;
+    }
 `;
 
 const Button = styled.button`
@@ -124,6 +133,14 @@ const Text = styled.div`
     text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     flex: 0 0 275px;
     display: block;
+
+    @media screen and (max-width: 900px) {
+        flex: 0 0 180px;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex: 0 0 120px;
+    }
 `;
 
 const Hour = styled(Text)`
@@ -139,4 +156,12 @@ const Second = styled(Text)`
 
 const AMPM = styled(Text)`
     font-size: 80px;
+
+    @media screen and (max-width: 900px) {
+        font-size: 60px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 30px;
+    }
 `;

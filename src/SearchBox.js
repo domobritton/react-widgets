@@ -119,7 +119,7 @@ export default class SearchBox extends Component {
 const SearchWrapper = styled.div`
     position: relative;
     width: 100%;
-    height: 725px;
+    height: 100vh;
 `;
 
 const Image = styled.img`
@@ -129,6 +129,7 @@ const Image = styled.img`
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
+    opacity: 0.8;
 `;
 
 const Input = styled.input`
